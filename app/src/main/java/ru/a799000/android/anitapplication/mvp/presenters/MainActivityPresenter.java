@@ -11,6 +11,11 @@ import ru.a799000.android.anitapplication.mvp.views.MainActivityView;
 @InjectViewState
 public class MainActivityPresenter extends MvpPresenter<MainActivityView>{
 
+    @Override
+    protected void onFirstViewAttach() {
+        super.onFirstViewAttach();
+    }
+
     public void onClickTvMessage() {
         getViewState().showMessage("click: " + new Date());
         getViewState().showListFragment();

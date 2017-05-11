@@ -9,6 +9,12 @@ import java.util.Date;
 
 @InjectViewState
 public class ListPresenter extends MvpPresenter<ListView> {
+
+    @Override
+    protected void onFirstViewAttach() {
+        super.onFirstViewAttach();
+    }
+
     public void onClickTvMessage() {
         getViewState().showMessage("click frag: " +new Date());
     }
